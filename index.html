@@ -1,16 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html class="no-js"> 
 <head>
 
     <!-- Meta-Information -->
-    <title>ACME Inc.</title>
+    <title>Angumix.</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="ACME Inc.">
@@ -26,10 +19,6 @@
 
 </head>
 <body ng-app="tutorialWebApp">
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
 
 <!-- Our Website Content Goes Here -->
 <div ng-include='"templates/header.html"'></div>
@@ -41,8 +30,11 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <!-- Vendor: Angular, followed by our custom Javascripts -->
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+<script src="/vendor/angular.js"></script>
+<script src="/vendor/angular-route.js"></script>
+<script src="/vendor/angular-messages.js"></script>
+<script src="/vendor/angular-resource.js"></script>
+<script type="json" src="/vendor/errors.json"></script>
 
 <!-- Our Website Javascripts -->
 <script src="js/main.js"></script>
