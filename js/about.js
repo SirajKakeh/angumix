@@ -1,4 +1,4 @@
-angular.module('tutorialWebApp').component('about', {
+angular.module('angumix').component('about', {
   templateUrl: './templates/about.html',
   bindings: {
   },

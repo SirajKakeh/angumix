@@ -1,19 +1,19 @@
-angular.module('tutorialWebApp')
+angular.module('angumix')
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
       // Home
-      .when("/", { templateUrl: "templates/home.html", controller: "PageCtrl" })
+      .when("/", { template: `<home></home>` })
       // Pages
-      .when("/about", { templateUrl: "templates/about.html", controller: "PageCtrl" })
-      .when("/faq", { templateUrl: "templates/faq.html", controller: "PageCtrl" })
-      .when("/pricing", { templateUrl: "templates/pricing.html", controller: "PageCtrl" })
-      .when("/services", { templateUrl: "templates/services.html", controller: "PageCtrl" })
-      .when("/contact", { templateUrl: "templates/contact.html", controller: "PageCtrl" })
+      .when("/about", { template: `<about></about>` })
+      .when("/faq", { template: `<faq></faq>` })
+      .when("/pricing", { template: `<pricing></pricing>` })
+      .when("/services", { template: `<services></services>` })
+      .when("/contact", { template: `<contact></contact>` })
       // Blog
-      .when("/blog", { templateUrl: "templates/blog.html", controller: "BlogCtrl" })
-      .when("/blog/post", { templateUrl: "templates/blog_item.html", controller: "BlogCtrl" })
+      .when("/blog", { template: `<blog></blog>` })
+      .when("/blog/post", { template: `<blog-item></blog-item>` })
       // else 404
-      .otherwise("/404", { templateUrl: "templates/404.html", controller: "PageCtrl" });
-      
+      .otherwise("/error", { template: `<wrong-route></wrong-route>` })
+
     $locationProvider.html5Mode(true);
   }]);
