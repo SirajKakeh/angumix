@@ -1,4 +1,4 @@
-angular.module('angumix').component('mainComp', {
+angular.module('mainPageModule').component('mainComp', {
   templateUrl: './templates/main_comp.html',
   bindings: {
   },

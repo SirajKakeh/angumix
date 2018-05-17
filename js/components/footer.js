@@ -1,4 +1,4 @@
-angular.module('angumix').component('ngFooter', {
+angular.module('mainPageModule').component('ngFooter', {
   templateUrl: './templates/footer.html',
   bindings: {
   },

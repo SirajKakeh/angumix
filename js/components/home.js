@@ -1,4 +1,4 @@
-angular.module('angumix').component('home', {
+angular.module('mainPageModule').component('home', {
   templateUrl: './templates/home.html',
   bindings: {
   },

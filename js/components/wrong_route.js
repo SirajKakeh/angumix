@@ -1,4 +1,4 @@
-angular.module('angumix').component('wrongRoute', {
+angular.module('mainPageModule').component('wrongRoute', {
   templateUrl: './templates/wrong_route.html',
   bindings: {
   },

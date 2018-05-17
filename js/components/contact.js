@@ -1,4 +1,4 @@
-angular.module('angumix').component('contact', {
+angular.module('mainPageModule').component('contact', {
   templateUrl: './templates/contact.html',
   bindings: {
   },

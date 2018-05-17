@@ -1,4 +1,4 @@
-angular.module('angumix').component('ngHeader', {
+angular.module('mainPageModule').component('ngHeader', {
   templateUrl: './templates/header.html',
   bindings: {
   },

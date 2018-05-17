@@ -1,4 +1,4 @@
-angular.module('angumix').component('blog', {
+angular.module('blogModule').component('blog', {
   templateUrl: './templates/blog.html',
   bindings: {
   },
@@ -6,5 +6,4 @@ angular.module('angumix').component('blog', {
 });
 
 function blogCtrl() {
-  var vm = this;
 }

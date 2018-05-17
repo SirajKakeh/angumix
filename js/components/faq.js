@@ -1,4 +1,4 @@
-angular.module('angumix').component('faq', {
+angular.module('mainPageModule').component('faq', {
   templateUrl: './templates/faq.html',
   bindings: {
   },

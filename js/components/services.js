@@ -1,4 +1,4 @@
-angular.module('angumix').component('services', {
+angular.module('mainPageModule').component('services', {
   templateUrl: './templates/services.html',
   bindings: {
   },
