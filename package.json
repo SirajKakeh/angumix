@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "node ./server/server.js",
-    "start": "npm run clean-dev && webpack --config config/webpack.dev.js --watch --profile --progress",
+    "start": "npm run server",
+    "start1": "npm run clean-dev && webpack --config config/webpack.dev.js --watch --profile --progress",
     "build": "npm run clean-aot && npm run ngc && webpack --config config/webpack.ng1.prod.js --progress --profile --bail && webpack --config config/webpack.prod.js --progress --profile --bail",
     "clean-dev": "rimraf dist/dev/*",
     "clean-aot": "rimraf dist/aot/*",
