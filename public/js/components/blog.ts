@@ -1,5 +1,5 @@
-angular.module('blogModule').component('blog', {
-  templateUrl: './templates/blog.html',
+angular.module('parentModule').component('blog', {
+  templateUrl: '../../templates/blog.html',
   bindings: {
   },
   controller: blogCtrl

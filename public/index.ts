@@ -1,9 +1,9 @@
 import "./js/toastrModule";
-import "./js/mainPageModule";
-import "./js/blogModule";
-import "./js/parentModule";
-import "./js/mainPageConfig";
-import "./js/blogConfig";
+// import "./js/mainPageModule";
+// import "./js/blogModule";
+import "./app";
+// import "./js/mainPageConfig";
+// import "./js/blogConfig";
 import "./js/authService";
 import "./js/currentUserService";
 import "./js/components/main_comp";

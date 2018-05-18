@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('home', {
-    templateUrl: './templates/home.html',
+angular.module('parentModule').component('home', {
+    templateUrl: '../../templates/home.html',
     bindings: {},
     controller: homeCtrl
 });

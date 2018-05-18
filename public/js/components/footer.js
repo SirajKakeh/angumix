@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('ngFooter', {
-    templateUrl: './templates/footer.html',
+angular.module('parentModule').component('ngFooter', {
+    templateUrl: '../../templates/footer.html',
     bindings: {},
     controller: footerCtrl
 });

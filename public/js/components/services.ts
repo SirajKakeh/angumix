@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('services', {
-  templateUrl: './templates/services.html',
+angular.module('parentModule').component('services', {
+  templateUrl: '../../templates/services.html',
   bindings: {
   },
   controller: servicesCtrl

@@ -1,5 +1,5 @@
 angular.module('parentModule').component('login', {
-    templateUrl: './templates/login.html',
+    templateUrl: '../../templates/login.html',
     bindings: {},
     controller: ['currentUserService', 'authService', 'toastr', '$location', loginCtrl]
 });

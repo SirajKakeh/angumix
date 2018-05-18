@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('pricing', {
-    templateUrl: './templates/pricing.html',
+angular.module('parentModule').component('pricing', {
+    templateUrl: '../../templates/pricing.html',
     bindings: {
         prices: '<'
     },

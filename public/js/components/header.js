@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('ngHeader', {
-    templateUrl: './templates/header.html',
+angular.module('parentModule').component('ngHeader', {
+    templateUrl: '../../templates/header.html',
     bindings: {},
     controller: headerCtrl
 });

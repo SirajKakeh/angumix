@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('faq', {
-    templateUrl: './templates/faq.html',
+angular.module('parentModule').component('faq', {
+    templateUrl: '../../templates/faq.html',
     bindings: {},
     controller: faqCtrl
 });

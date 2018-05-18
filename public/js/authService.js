@@ -1,4 +1,4 @@
-angular.module('mainPageModule').factory('authService', function ($q, $http, currentUserService) {
+angular.module('parentModule').factory('authService', function ($q, $http, currentUserService) {
     return {
         login: function (credentials) {
             var dfd = $q.defer();

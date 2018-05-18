@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('contact', {
-  templateUrl: './templates/contact.html',
+angular.module('parentModule').component('contact', {
+  templateUrl: '../../templates/contact.html',
   bindings: {
   },
   controller: contactCtrl

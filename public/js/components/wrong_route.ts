@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('wrongRoute', {
-  templateUrl: './templates/wrong_route.html',
+angular.module('parentModule').component('wrongRoute', {
+  templateUrl: '../../templates/wrong_route.html',
   bindings: {
   },
   controller: wrongRouteCtrl

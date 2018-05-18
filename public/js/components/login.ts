@@ -1,5 +1,5 @@
 angular.module('parentModule').component('login', {
-  templateUrl: './templates/login.html',
+  templateUrl: '../../templates/login.html',
   bindings: {
   },
   controller: ['currentUserService', 'authService', 'toastr', '$location', loginCtrl]
@@ -16,7 +16,8 @@ function loginCtrl(currentUserService, authService, toastr, $location) {
     }).then(function () {
       $location.path('/');
     }, function (err) {
-      toastr.error(err);
+      console.log("error in sign in");
+      console.log(err);
     })
   }
 };

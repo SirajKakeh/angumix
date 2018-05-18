@@ -1,4 +1,4 @@
-angular.module('mainPageModule').factory('currentUserService', function ($http, $q) {
+angular.module('parentModule').factory('currentUserService', function ($http, $q) {
   return {
     currentUser: null,
 

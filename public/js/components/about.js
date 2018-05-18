@@ -1,5 +1,5 @@
-angular.module('mainPageModule').component('about', {
-    templateUrl: './templates/about.html',
+angular.module('parentModule').component('about', {
+    templateUrl: '../../templates/about.html',
     bindings: {},
     controller: aboutCtrl
 });
