@@ -36,7 +36,6 @@ function mainConfig($routeProvider, $locationProvider) {
       }
     })
     // Pages
-    .when("/about", { template: `<about></about>` })
     .when("/login", {
       template: `<login></login>`,
       resolve: {
@@ -50,10 +49,10 @@ function mainConfig($routeProvider, $locationProvider) {
     .when("/blog", { template: `<blog></blog>` })
     .when("/blog/post", { template: `<blog-item></blog-item>` })
     .when("/error", { template: `<wrong-route></wrong-route>` })
-    // else 404
-    .otherwise({
-      redirectTo: '/error'
-    });
+  // else 404
+  // .otherwise({
+  //   redirectTo: '/error'
+  // });
 
   $locationProvider.html5Mode(true);
 }

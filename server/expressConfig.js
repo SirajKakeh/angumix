@@ -21,12 +21,12 @@ module.exports = function (app) {
   app.use(passport.initialize());
   app.use(passport.session());
 
-  app.use(express.static(rootPath + '/dist/dev'));
+  app.use(express.static(rootPath + '/dist/aot'));
   app.use('/vendor', express.static(rootPath + '/public/vendor'));
   app.use('/favicon.ico', express.static(rootPath + '/public//favicon.ico'));
   app.use('/styles.css', express.static(rootPath + '/public/styles.css'));
 
-  var ignoredPaths = ['/vendor', '/css', '/js', '/views', '/api', '/styles', '/favicon.ico'];
+  // var ignoredPaths = ['/vendor', '/css', '/js', '/views', '/api', '/styles', '/favicon.ico'];
 
   // app.all('/*', function (req, res, next) {
   //   //Redirecting to index only the requests that do not start with ignored paths

@@ -1,45 +1,37 @@
-// import { platformBrowser }    from '@angular/platform-browser';
-// import {AppModuleNgFactory} from "../aot/public/app/app.module.ngfactory";
+import { platformBrowser } from "@angular/platform-browser";
+import { enableProdMode } from '@angular/core';
+import { setUpLocationSync } from "@angular/router/upgrade";
+import { downgradeInjectable, downgradeComponent, UpgradeModule } from '@angular/upgrade/static';
+//@ts-ignore
+import { AppModuleNgFactory } from "../aot/public/Angular/app.module.ngfactory";
 
-// import { UpgradeModule } from '@angular/upgrade/static';
-// import { downgradeInjectable, downgradeComponent } from '@angular/upgrade/static';
+import { AppModule } from './Angular/app.module';
+import { AboutComponent } from './Angular/about/about.component';
+import { NgHeader } from './Angular/header/header.component';
+import { Home } from './Angular/home/home.component';
 
-// import './app/rxjsOperations';
+declare var angular: angular.IAngularStatic;
 
-// import { AppModule } from './app/app.module';
-// import { NameParser } from "./app/admin/nameParser.service";
-// import { UnreviewedTalkComponent } from "./app/home/unreviewedTalk.component";
-// import { ProfileComponent } from "./app/profile/profile.component";
-// import { Sessions } from "./app/sessions/sessions.service";
-// import { DetailPanelComponent } from "./app/common/detailPanel.component";
+declare var process;
+if (process.env.ENV === 'production') {
+  console.log("PROD MODE");
+  enableProdMode();
+}
 
-// declare var angular: angular.IAngularStatic;
+platformBrowser().bootstrapModuleFactory(AppModuleNgFactory).then(platformRef => {
+  // downgrades
+  angular.module('parentModule')
+    .directive('about', downgradeComponent({
+      component: AboutComponent
+    }))
+    .directive('ngHeader', downgradeComponent({
+      component: NgHeader
+    }))
+    .directive('home', downgradeComponent({
+      component: Home
+    }))
 
-
-// import { enableProdMode } from '@angular/core';
-
-// declare var process;
-// if (process.env.ENV === 'production') {
-//     console.log("PROD MODE");
-//     enableProdMode();
-// }
-
-// platformBrowser().bootstrapModuleFactory(AppModuleNgFactory).then(platformRef => {
-//   // downgrades
-//   angular.module('app')
-//     .factory('nameParser', downgradeInjectable(NameParser))
-//     .factory('sessions', downgradeInjectable(Sessions))
-//     .directive('unreviewedTalk', downgradeComponent({
-//       component: UnreviewedTalkComponent
-//     }))
-//     .directive('profile', downgradeComponent({
-//       component: ProfileComponent
-//     }))
-//     .directive('detailPanel', downgradeComponent({
-//       component: DetailPanelComponent,
-//     }))
-    
-//   const upgrade = platformRef.injector.get(UpgradeModule) as UpgradeModule;
-//   upgrade.bootstrap(document.documentElement, ['app']);
-//   console.log('hybrid app bootstrapped');
-// })
+  const upgrade = platformRef.injector.get(UpgradeModule) as UpgradeModule;
+  upgrade.bootstrap(document.documentElement, ['parentModule']);
+  console.log('hybrid app bootstrapped');
+})

@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'my-ng-app',
   template: `
   <div class="ng-view"></div>
+  <router-outlet></router-outlet>
   `
 })
-export class AppComponent {
-  // <router-outlet></router-outlet>
-}
+export class AppComponent {}
