@@ -10,7 +10,3 @@ angular.module('parentModule').run(function($rootScope, $location) {
     }
   })
 });
-
-angular.element(document).ready(() => {
-  angular.bootstrap(document.body, ['parentModule']);
-});

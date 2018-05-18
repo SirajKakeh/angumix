@@ -26,6 +26,6 @@ module.exports = function(app) {
   });
 
   app.get('*', function(req, res) {
-    res.sendStatus(403);
+    res.sendStatus(404);
   });
 }
