@@ -1,2 +1,2 @@
-var blogModule = angular.module('blogModule', ['ngRoute']);
+angular.module('blogModule', ['ngRoute']);
 //# sourceMappingURL=blogModule.js.map

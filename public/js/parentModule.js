@@ -1,5 +1,5 @@
-var parentModule = angular.module('parentModule', ['ngRoute', 'toastr', 'mainPageModule', 'blogModule']);
-parentModule.run(function ($rootScope, $location) {
+angular.module('parentModule', ['ngRoute', 'toastr', 'mainPageModule', 'blogModule']);
+angular.module('parentModule').run(function ($rootScope, $location) {
     $rootScope.$on("$routeChangeError", function (e, next, prev, err) {
         if (err === "AUTH_REQUIRED") {
             $location.path("/login");
