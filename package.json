@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "server": "node ./server/server.js",
-    "start1": "npm run server",
     "start": "npm run clean-dev && webpack --config config/webpack.dev.js --watch --profile --progress",
     "build": "npm run clean-aot && npm run ngc && webpack --config config/webpack.ng1.prod.js --progress --profile --bail && webpack --config config/webpack.prod.js --progress --profile --bail",
     "clean-dev": "rimraf dist/dev/*",

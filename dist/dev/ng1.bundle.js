@@ -362,7 +362,7 @@ function loginCtrl(currentUserService, authService, $location) {
 /***/ 182:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-lg-4 col-md-4\">\n  <h3 style=\"text-align:center;color: rgb(208, 20, 39)\">\n    <i class=\"fa fa-check-circle\"></i>\n    This Page is Built With and Routed to Using AngularJS\n  </h3>\n</div>\n\n<h1>Please Login</h1>\n\n<p>Use username \"a\" to login</p>\n<form class=\"form\">\n  <div class=\"row\">\n    <div class=\"form-group col-sm-6\">\n      <input type=\"text\" autofocus placeholder=\"username\" ng-model=\"$ctrl.username\" class=\"form-control\">\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <button class=\"btn btn-primary\" ng-click=\"$ctrl.login()\">Login</button>\n    </div>\n  </div>\n</form>";
+module.exports = "<div class=\"col-lg-4 col-md-4\">\n  <h3 style=\"text-align:center;color: rgb(208, 20, 39)\">\n    <i class=\"fa fa-check-circle\"></i>\n    This Page is Built With and Routed to Using AngularJS\n  </h3>\n</div>\n<br>\n\n<h1>Please Login</h1>\n\n<p>Use username \"a\" to login</p>\n<form class=\"form\">\n  <div class=\"row\">\n    <div class=\"form-group col-sm-6\">\n      <input type=\"text\" autofocus placeholder=\"username\" ng-model=\"$ctrl.username\" class=\"form-control\">\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <button class=\"btn btn-primary\" ng-click=\"$ctrl.login()\">Login</button>\n    </div>\n  </div>\n</form>";
 
 /***/ })
 
