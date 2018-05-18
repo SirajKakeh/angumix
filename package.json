@@ -10,7 +10,7 @@
     "build": "npm run clean-aot && npm run ngc && webpack --config config/webpack.ng1.prod.js --progress --profile --bail && webpack --config config/webpack.prod.js --progress --profile --bail",
     "clean-dev": "rimraf dist/dev/*",
     "clean-aot": "rimraf dist/aot/*",
-    "postinstall": "npm run build && npm run server",
+    "postinstall": "npm run build",
     "dev": "nodemon ./server/server.js -w ./server",
     "test": "karma start config/angularjs-karma.conf.js",
     "test2": "karma start config/angular-karma.conf.js",
