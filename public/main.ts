@@ -5,12 +5,20 @@ import { downgradeInjectable, downgradeComponent } from '@angular/upgrade/static
 // import './app/rxjsOperations';
 
 import { AppModule } from './Angular/app.module';
+import { AboutComponent } from './Angular/about/about.component';
+import { NgHeader } from './Angular/header/header.component';
 
 declare var angular: angular.IAngularStatic;
 
 platformBrowserDynamic().bootstrapModule(AppModule).then(platformRef => {
   // downgrades
-  // angular.module('parentModule')
+  angular.module('parentModule')
+    .directive('about', downgradeComponent({
+      component: AboutComponent
+    }))
+    .directive('ngHeader', downgradeComponent({
+      component: NgHeader
+    }))
   
 
   const upgrade = platformRef.injector.get(UpgradeModule) as UpgradeModule;

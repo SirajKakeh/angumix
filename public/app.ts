@@ -1,4 +1,4 @@
-angular.module('parentModule', ['ngRoute', 'toastr']);
+angular.module('parentModule', ['ngRoute']);
 
 angular.module('parentModule').run(function ($rootScope, $location) {
   $rootScope.$on("$routeChangeError", function (e, next, prev, err) {
@@ -22,24 +22,6 @@ function mainConfig($routeProvider, $locationProvider) {
     waitForAuth: function (authService) {
       return authService.waitForAuth();
     },
-    requireAdmin: function (authService) {
-      return authService.requireAdmin();
-    },
-    userSessions: function (sessions, currentIdentity, authService) {
-      return authService.requireLogin().then(function () {
-        return sessions.getSessionsByUser(currentIdentity.currentUser.id);
-      });
-    },
-    allSessions: function (sessions, authService) {
-      return authService.requireLogin().then(function () {
-        return sessions.getAllSessions();
-      });
-    },
-    allUsers: function (users, authService) {
-      return authService.requireLogin().then(function () {
-        return users.getAllUsers();
-      });
-    }
   }
 
   $routeProvider

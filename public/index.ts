@@ -1,4 +1,3 @@
-import "./js/toastrModule";
 // import "./js/mainPageModule";
 // import "./js/blogModule";
 import "./app";
@@ -6,11 +5,7 @@ import "./app";
 // import "./js/blogConfig";
 import "./js/authService";
 import "./js/currentUserService";
-import "./js/components/main_comp";
 import "./js/components/home";
-import "./js/components/header";
-import "./js/components/footer";
-import "./js/components/about";
 import "./js/components/contact";
 import "./js/components/services";
 import "./js/components/wrong_route";

@@ -2,10 +2,10 @@ angular.module('parentModule').component('login', {
   templateUrl: '../../templates/login.html',
   bindings: {
   },
-  controller: ['currentUserService', 'authService', 'toastr', '$location', loginCtrl]
+  controller: ['currentUserService', 'authService', '$location', loginCtrl]
 });
 
-function loginCtrl(currentUserService, authService, toastr, $location) {
+function loginCtrl(currentUserService, authService, $location) {
   if (currentUserService.authenticated()) {
     $location.path('/');
   }

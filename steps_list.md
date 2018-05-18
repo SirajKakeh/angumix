@@ -13,10 +13,10 @@
 ## 2- Adding Angular
 
 * remove manual bootstrapping from AngulaJS
-* create main.ts in `public` folder, which is Angular entry point
+* create `main.ts` in `public` folder, which is Angular entry point
 * bootstrap AngulaJS inside main.ts
 * create Angular folder, where all Angular code will live
 * create `app.module.ts` & `app.component.ts`
 * bootstrap `AppModule` into `main.ts`
-* update webpack to add Angular bundle
-* 
+* update webpack config to add Angular bundle
+* start migrating components and services now!
