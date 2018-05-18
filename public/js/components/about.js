@@ -6,5 +6,4 @@ angular.module('mainPageModule').component('about', {
 });
 
 function aboutCtrl() {
-  var vm = this;
 }

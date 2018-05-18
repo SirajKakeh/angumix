@@ -6,4 +6,7 @@ angular.module('mainPageModule').component('home', {
 });
 
 function homeCtrl() {
+  this.$onInit = function() {
+    console.log("init homeCtrl");
+  };
 }

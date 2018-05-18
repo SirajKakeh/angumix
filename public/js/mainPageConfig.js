@@ -1,12 +1,9 @@
 angular.module('mainPageModule')
   .config(['$routeProvider', '$locationProvider', mainConfig]);
 
-function mainConfig($routeProvider, $locationProvider) {
+function mainConfig($routeProvider, $locationProvider, authService) {
+  console.log(authService);
   var routeResolvers = {
-    loggedIn: function (auth) {
-      console.log('auth on login:', auth);
-      return auth.requireLogin();
-    },
     waitForAuth: function (auth) {
       return auth.waitForAuth();
     },
@@ -22,7 +19,10 @@ function mainConfig($routeProvider, $locationProvider) {
     .when("/", {
       template: `<home></home>`,
       resolve: {
-        login: routeResolvers.loggedIn,
+        'auth': function(authService) {
+          console.log('heeeeeeeeere', authService)
+          return authService.authenticate();
+        },
       }
     })
     // Pages
