@@ -1,4 +1,4 @@
-var parentModule = angular.module('parentModule', ['ngRoute', 'mainPageModule', 'blogModule']);
+var parentModule = angular.module('parentModule', ['ngRoute', 'toastr', 'mainPageModule', 'blogModule']);
 
 parentModule.run(function($rootScope, $location) {
   $rootScope.$on("$routeChangeError", function(e, next, prev, err) {

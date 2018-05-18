@@ -1,7 +1,6 @@
 angular.module('mainPageModule').factory('authService', function ($q, $http, currentUserService) {
   return {
-    authenticate: function (credentials) {
-      console.log(credentials)
+    login: function (credentials) {
       var dfd = $q.defer();
       $http.post('/api/login', credentials).then(function (response) {
         currentUserService.setUser(response.data.user);
@@ -25,7 +24,7 @@ angular.module('mainPageModule').factory('authService', function ($q, $http, cur
 
     waitForAuth: function () {
       var dfd = $q.defer();
-      $http.get('/api/currentUserService').then(function (response) {
+      $http.get('/api/currentIdentity').then(function (response) {
         if (!!response.data) {
           currentUserService.setUser(response.data);
         }

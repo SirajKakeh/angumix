@@ -1,1 +1,1 @@
-var mainPage = angular.module('mainPageModule', ['ngRoute']);
+var mainPage = angular.module('mainPageModule', ['ngRoute', 'toastr']);

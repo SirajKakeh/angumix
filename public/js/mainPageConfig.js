@@ -1,39 +1,55 @@
 angular.module('mainPageModule')
   .config(['$routeProvider', '$locationProvider', mainConfig]);
 
-function mainConfig($routeProvider, $locationProvider, authService) {
-  console.log(authService);
+function mainConfig($routeProvider, $locationProvider) {
   var routeResolvers = {
-    waitForAuth: function (auth) {
-      return auth.waitForAuth();
+    loggedIn: function (authService) {
+      return authService.requireLogin();
     },
-    pricePlans: function (sessions, auth) {
-      return auth.requireLogin().then(function () {
+    waitForAuth: function (authService) {
+      return authService.waitForAuth();
+    },
+    requireAdmin: function (authService) {
+      return authService.requireAdmin();
+    },
+    userSessions: function (sessions, currentIdentity, authService) {
+      return authService.requireLogin().then(function () {
+        return sessions.getSessionsByUser(currentIdentity.currentUser.id);
+      });
+    },
+    allSessions: function (sessions, authService) {
+      return authService.requireLogin().then(function () {
         return sessions.getAllSessions();
+      });
+    },
+    allUsers: function (users, authService) {
+      return authService.requireLogin().then(function () {
+        return users.getAllUsers();
       });
     }
   }
-  
+
   $routeProvider
     // Home
+    .when("/home", {
+      redirectTo: '/'
+    })
     .when("/", {
       template: `<home></home>`,
       resolve: {
-        'auth': function(authService) {
-          console.log('heeeeeeeeere', authService)
-          return authService.authenticate();
-        },
+        login: routeResolvers.loggedIn,
       }
     })
     // Pages
     .when("/about", { template: `<about></about>` })
-    .when("/faq", { template: `<faq></faq>` })
-    .when("/pricing", {
-      template: `<pricing prices="$resolve.prices"></pricing>`,
+    .when("/login", {
+      template: `<login></login>`,
       resolve: {
-        prices: routeResolvers.pricePlans
+        currentAuth: routeResolvers.waitForAuth
       }
     })
+    .when("/faq", { template: `<faq></faq>` })
+    .when("/pricing", { template: `<pricing prices="$resolve.prices"></pricing>` })
     .when("/services", { template: `<services></services>` })
     .when("/contact", { template: `<contact></contact>` })
     .when("/error", { template: `<wrong-route></wrong-route>` })
