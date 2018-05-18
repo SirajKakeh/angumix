@@ -11,5 +11,5 @@ require('./passport')();
 
 require('./routes')(app);
 
-app.listen(8802);
+app.listen(port);
 console.log('Listening on port ' + port + '...');
